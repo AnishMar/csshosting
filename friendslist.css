@@ -1,0 +1,300 @@
+/*Friends List Fix by Tropical*/
+
+
+/*some code copied from midnight*/
+
+.container-1D34oG {
+	background: var(--nox-level1) !important;
+}
+
+
+/*tabBar*/
+
+.container-1D34oG .title-29uC1r {
+	font-size: 14px;
+}
+
+.container-1D34oG .tabBar-ZmDY9v .item-3HknzM {
+	height: 48px;
+	border-radius: 0;
+	box-sizing: border-box;
+	background: transparent !important;
+	transition: 300ms ease;
+	padding: 2px 16px;
+	min-width: 80px;
+	margin: 0;
+	font-size: 14px;
+}
+
+.container-1D34oG .topPill-30KHOu .themed-OHr7kt.item-PXvHYJ:hover {
+	color: var(--nox-white8);
+}
+
+.container-1D34oG .topPill-30KHOu .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ {
+	color: var(--nox-white);
+}
+
+.container-1D34oG .tabBar-ZmDY9v .item-3HknzM[style*="background-color"] {
+	color: var(--nox-accent) !important;
+}
+
+.container-1D34oG .tabBar-ZmDY9v .item-3HknzM[style*="0.2"] {
+	color: var(--nox-white) !important;
+}
+
+.container-1D34oG .tabBar-ZmDY9v .item-3HknzM[style*="background-color"]::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--nox-accent);
+	transform: scaleY(0);
+	opacity: .5;
+	transform-origin: bottom;
+	transition: 150ms ease;
+	z-index: -1;
+}
+
+.container-1D34oG .tabBar-ZmDY9v .item-3HknzM[style*="0.2"]::before {
+	opacity: 1;
+	transform: none;
+}
+
+.container-1D34oG .tabBar-ZmDY9v .item-3HknzM::after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	background: white;
+	bottom: 0;
+	left: 0;
+	opacity: 1;
+	transform-origin: bottom;
+	pointer-events: none;
+}
+
+.container-1D34oG .tabBar-ZmDY9v .item-3HknzM:not(.selected-3s45Ha)::after {
+	transform: translate(80px) scale(2.5, 1);
+	transition: 200ms cubic-bezier(1, 0, 0, 0.7), opacity 100ms;
+	opacity: 0;
+}
+
+.container-1D34oG .tabBar-ZmDY9v .selected-3s45Ha.item-PXvHYJ::after {
+	transition: 200ms cubic-bezier(0, 0, 0, 1), opacity 1ms ease;
+	transform: scale(1, 1);
+}
+
+.container-1D34oG .tabBar-ZmDY9v .selected-3s45Ha.item-PXvHYJ::after~.item-PXvHYJ::after {
+	transform: translate(-80px) scale(2.5, 1);
+	transition: 200ms cubic-bezier(1, 0, 0, 0.7), opacity 100ms;
+	opacity: 0;
+}
+
+.tabBar-ZmDY9v .badge-1Skb69 {
+	color: var(--nox-level3);
+	background: var(--nox-white2) !important;
+	vertical-align: text-top;
+	transition: 300ms ease;
+	border-radius: 2px;
+}
+
+.tabBar-ZmDY9v .selected-3s45Ha.item-PXvHYJ .badge-1Skb69 {
+	color: var(--nox-level3);
+	background: var(--nox-white4) !important;
+}
+
+
+/*nowPlayingColumn*/
+
+@keyframes slide-out-enable {
+	0% {
+		pointer-events: none;
+	}
+	100% {
+		pointer-events: all;
+	}
+}
+
+.nowPlayingColumn-2sl4cE {
+	min-width: unset;
+	position: absolute;
+	right: 0;
+	height: 100%;
+	width: 300px;
+	transform: translateX(250px);
+	transition: 250ms cubic-bezier(.52, 0, .74, 0);
+	z-index: 10;
+	background: var(--nox-level2);
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+.nowPlayingColumn-2sl4cE::after {
+	content: '|||';
+	color: #fff;
+	font-size: 12px;
+	position: absolute;
+	left: 25px;
+	top: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	transition: 450ms ease;
+}
+
+.nowPlayingColumn-2sl4cE:hover::after {
+	opacity: 0;
+}
+
+.nowPlayingColumn-2sl4cE:hover {
+	transform: none;
+}
+
+.nowPlayingColumn-2sl4cE .scroller-2FKFPG {
+	pointer-events: none;
+	opacity: 0;
+	transform: scale(.95);
+	transition: 250ms cubic-bezier(.52, 0, .74, 0);
+}
+
+.nowPlayingColumn-2sl4cE:hover .scroller-2FKFPG {
+	opacity: 1;
+	transform: none;
+}
+
+.nowPlayingColumn-2sl4cE:hover .itemCard-v9viV7 {
+	animation: slide-out-enable 450ms linear forwards;
+}
+
+.wrapper-3D2qGf {
+	background: var(--nox-level1);
+	transition: 150ms ease;
+}
+
+.outer-1AjyKL.active-1xchHY,
+.outer-1AjyKL.interactive-3B9GmY:hover,
+.popout-38lTFE {
+	background: var(--nox-level3) !important;
+}
+
+.inset-3sAvek,
+.enabled-1t_Gxm:hover,
+.memberListItem-31QoHj:not(.popoutDisabled-2RK7MF):hover {
+	background: var(--nox-level2) !important;
+}
+
+.enabled-1t_Gxm,
+.memberListItem-31QoHj:not(.popoutDisabled-2RK7MF) {
+	border-radius: 3px;
+}
+
+.popout-38lTFE {
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+
+/*peopleColumn*/
+
+.peopleColumn-29fq28 {
+	margin-right: 50px;
+	animation: opacity 300ms ease;
+	transform-origin: top;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 7;
+}
+
+@media (max-width: 1200px) {
+	.peopleColumn-29fq28 {
+		margin-right: 0;
+	}
+}
+
+.peopleColumn-29fq28 .scroller-2FKFPG {
+	padding-bottom: 30px;
+}
+
+#app-mount header+.peopleListItem-2nzedh {
+	border-radius: 3px 3px 0 0;
+}
+
+#app-mount .peopleColumn-29fq28 .peopleListItem-2nzedh:nth-last-child(2) {
+	border-radius: 0 0 3px 3px;
+}
+
+#app-mount .peopleListItem-2nzedh {
+	border: none;
+	transition: 100ms ease;
+	margin: 0 20px;
+	opacity: 0.9 !important;
+	background: #333333;
+	padding: 0 10px;
+	z-index: 0;
+	position: relative;
+	border-radius: 0;
+}
+
+.peopleColumn-29fq28 .actions-1SQwjn {
+	opacity: 0;
+	transition: 150ms ease;
+}
+
+.peopleListItem-2nzedh:hover .actions-1SQwjn {
+	opacity: 1;
+}
+
+.peopleColumn-29fq28 .actionButton-uPB8Fs {
+	background: transparent !important;
+	width: 22px;
+	height: 22px;
+}
+
+#app-mount .peopleListItem-2nzedh:hover {
+	transition: all 100ms ease, z-index 0ms;
+	opacity: 1 !important;
+	background: #353535 !important;
+	z-index: 1;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.peopleColumn-29fq28 .text-GwUZgS {
+	color: var(--nox-white3) !important;
+}
+
+.peopleColumn-29fq28 .image-1GzsFd {
+	filter: grayscale(75%);
+	opacity: 0.6;
+}
+
+
+/*addFriends*/
+
+.addInputWrapper-1BOZ3d {
+	background: rgba(0, 0, 0, 0.15) !important;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.125);
+	z-index: 8;
+}
+
+.sectionHeader-20RGqu {
+	border-bottom: none !important;
+}
+
+.wrapper-1cBijl {
+	margin: 14px 0;
+	border-radius: 3px;
+	border: none !important;
+	background: var(--nox-level2);
+	color: var(--nox-white);
+	transition: 150ms ease;
+}
+
+.addFriendInput-4bcerK,
+.addFriendHint-3Y70FX {
+	color: var(--nox-white);
+	font-size: 14px;
+}
+
+.addFriendInput-4bcerK::-webkit-input-placeholder,
+.addFriendHint-3Y70FX {
+	color: var(--nox-white3);
+}
